@@ -1,7 +1,7 @@
 version: '3.2'
 services:
   minecraft-server:
-    image: hexlo/minecraft-bedrock-server:latest
+    image: kr1st1anv/minecraft-bedrock-server:latest
     container_name: minecraft-server
     stdin_open: true # docker run -i
     tty: true        # docker run -t
