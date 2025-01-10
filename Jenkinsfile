@@ -2,7 +2,7 @@ pipeline {
   environment {
     userName = "kr1st1anv"
     imageName = "minecraft-bedrock-server"
-    tag = "latest"
+    tag = ""
     gitRepo = "https://github.com/${userName}/${imageName}.git"
     dockerhubRegistry = "${userName}/${imageName}"
     githubRegistry = "ghcr.io/${userName}/${imageName}"
