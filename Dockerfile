@@ -16,7 +16,7 @@ RUN apt update && apt install -y curl unzip nano
 
 WORKDIR ${SERVER_DIR}
 
-RUN mkdir -p ${SERVER_DIR}/defaults ${SERVER_DIR}/config ${SERVER_DIR}/worlds ${SERVER_DIR}/info ${SERVER_DIR}/resource_packs /scripts
+RUN mkdir -p ${SERVER_DIR}/defaults ${SERVER_DIR}/config ${SERVER_DIR}/behavior_packs ${SERVER_DIR}/worlds ${SERVER_DIR}/info ${SERVER_DIR}/resource_packs /scripts
 
 COPY ./.scripts/* /scripts/
 
@@ -46,7 +46,7 @@ RUN if [ "${VERSION}" = "latest" ]; then \
 
 EXPOSE 19132/udp
 
-VOLUME ["${SERVER_DIR}/worlds", "${SERVER_DIR}/config", "${SERVER_DIR}/info", "${SERVER_DIR}/resource_packs"]
+VOLUME ["${SERVER_DIR}/worlds", "${SERVER_DIR}/config", "${SERVER_DIR}/info", "${SERVER_DIR}/resource_packs", "${SERVER_DIR}/behavior_packs"]
 
 WORKDIR ${SERVER_DIR}
 
