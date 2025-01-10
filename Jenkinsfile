@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    userName = "hexlo"
+    userName = "kr1st1anv"
     imageName = "minecraft-bedrock-server"
     tag = "latest"
     gitRepo = "https://github.com/${userName}/${imageName}.git"
